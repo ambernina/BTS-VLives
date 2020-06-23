@@ -1,15 +1,30 @@
 import React from "react";
 import Checkbox from "./Checkbox";
+// import {
+// 	CheckboxFilter,
+// 	TermQuery,
+// 	BoolMust,
+// 	RangeQuery
+// } from "searchkit";
 
 const Sidebar = () => {
+	
+
+	// const filter = () => {
+		// if (cardText.includes('RM')) {
+		// 	document.querySelectorAll('card-text').parentNode.style("display", "show");
+		// }
+	// }
+
 	return (
 		<form>
 			<div className="mb-3" style={{ padding: "10px"}}>
         <h4>Filters | Search</h4>
         <br/>
         <h6>Search by Title</h6>
-        <input class="form-control" type="text" placeholder="Default input" aria-label="deafult input example"/>
+        <input className="form-control" type="text" placeholder="Default input" aria-label="default input example"/>
         <br/>
+				{/* <CheckboxFilter id="RM" title="Members" label="RM" filter={TermQuery("card-text", 'RM')} /> */}
         <h6>Members</h6>
 				<Checkbox label="RM" />
 				<Checkbox label="Jin" />
