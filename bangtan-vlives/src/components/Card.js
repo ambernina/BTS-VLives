@@ -36,7 +36,7 @@ const Card = () => {
 							key={i + "-video"}
 						>
 							<img
-								src={require("../assets/images/fake-love-sm.jpg")}
+								src={video.Thumb}
 								className="card-img-top"
 								alt="..."
 								width="240px"
