@@ -16,28 +16,36 @@ const MainContent = () => {
 		setResult(data);
 	}, []);
 	console.log("search", search);
-	console.log("before result", result);
+	// console.log("before result", result);
 
-	const inputSearch = e => {
+	const inputSearch = () => {
 		setFiltered(
 			result.filter(value => {
 				return value.Title.toLowerCase().includes(search.toLowerCase());
 			})
 		);
 		console.log("filtered", filtered);
-
-		// let keyword = e.target.value;
-		// console.log(e.target.value);
-		// setSearch(keyword);
 	};
 
-	const handleChange = () => {
-		// console.log(e.target.value);
-		// setSearch(e.target.value, () => {
-		inputSearch();
-		setIsFiltered(true);
-		// });
+	const checkboxSearch = () => {
+		setFiltered(
+			result.filter(value => {
+				return (
+					value.Members.toLowerCase().includes(search.toLowerCase()) ||
+					value.Date.toLowerCase().includes(search.toLowerCase())
+				);
+			})
+		);
+		console.log("filtered", filtered);
 	};
+
+	// const handleChange = () => {
+	// 	// if (e.target.type === "checkbox") {
+	// 	// 	checkboxSearch();
+	// 	// } else {
+	// 		inputSearch();
+	// 	// }
+	// };
 
 	return (
 		<div
@@ -46,7 +54,7 @@ const MainContent = () => {
 				padding: "25px",
 				// background: "rgb(85,247,255)",
 				background:
-					"linear-gradient(180deg, rgba(85,247,255,1) 0%, rgba(255,255,255,1) 3%)",
+					"linear-gradient(180deg, rgba(85,247,255,1) 0%, rgba(255,255,255,1) 10%)",
 				height: "22130px"
 			}}
 		>
@@ -59,7 +67,7 @@ const MainContent = () => {
 						style={{
 							// background: "rgb(85,247,255)",
 							background:
-								"linear-gradient(180deg, rgba(85,247,255,1) 0%, rgba(255,255,255,1) 80%)"
+								"linear-gradient(0deg, rgba(85,247,255,1) 0%, rgba(255,255,255,1) 80%)"
 						}}
 					>
 						<form>
@@ -80,27 +88,123 @@ const MainContent = () => {
 									// onChange={handleChange}
 									onChange={e => {
 										setSearch(e.target.value);
-										handleChange();
+										inputSearch();
+										if (e.target.value === "") {
+											setIsFiltered(false);
+										} else {
+											setIsFiltered(true);
+										}
 									}}
 								/>
 								<br />
 								{/* <CheckboxFilter id="RM" title="Members" label="RM" filter={TermQuery("card-text", 'RM')} /> */}
 								<h6>Members</h6>
-								<Checkbox label="RM" />
-								<Checkbox label="Jin" />
-								<Checkbox label="Suga" />
-								<Checkbox label="JHope" />
-								<Checkbox label="Jimin" />
-								<Checkbox label="V" />
-								<Checkbox label="Jungkook" />
+								<Checkbox
+									value="RM"
+									onChange={e => {
+										setIsFiltered(true);
+										setSearch(e.target.value);
+										checkboxSearch();
+									}}
+								/>
+								<Checkbox
+									value="Jin"
+									onChange={e => {
+										setIsFiltered(true);
+										setSearch(e.target.value);
+										checkboxSearch();
+									}}
+								/>
+								<Checkbox
+									value="Suga"
+									onChange={e => {
+										setIsFiltered(true);
+										setSearch(e.target.value);
+										checkboxSearch();
+									}}
+								/>
+								<Checkbox
+									value="JHope"
+									onChange={e => {
+										setIsFiltered(true);
+										setSearch(e.target.value);
+										checkboxSearch();
+									}}
+								/>
+								<Checkbox
+									value="Jimin"
+									onChange={e => {
+										setIsFiltered(true);
+										setSearch(e.target.value);
+										checkboxSearch();
+									}}
+								/>
+								<Checkbox
+									value="V"
+									onChange={e => {
+										setIsFiltered(true);
+										setSearch(e.target.value);
+										checkboxSearch();
+									}}
+								/>
+								<Checkbox
+									value="Jungkook"
+									onChange={e => {
+										setIsFiltered(true);
+										setSearch(e.target.value);
+										checkboxSearch();
+									}}
+								/>
 								<br />
 								<h6>Year</h6>
-								<Checkbox label="2015" />
-								<Checkbox label="2016" />
-								<Checkbox label="2017" />
-								<Checkbox label="2018" />
-								<Checkbox label="2019" />
-								<Checkbox label="2020" />
+								<Checkbox
+									value="2015"
+									onChange={e => {
+										setIsFiltered(true);
+										setSearch(e.target.value);
+										checkboxSearch();
+									}}
+								/>
+								<Checkbox
+									value="2016"
+									onChange={e => {
+										setIsFiltered(true);
+										setSearch(e.target.value);
+										checkboxSearch();
+									}}
+								/>
+								<Checkbox
+									value="2017"
+									onChange={e => {
+										setIsFiltered(true);
+										setSearch(e.target.value);
+										checkboxSearch();
+									}}
+								/>
+								<Checkbox
+									value="2018"
+									onChange={e => {
+										setIsFiltered(true);
+										setSearch(e.target.value);
+										checkboxSearch();
+									}}
+								/>
+								<Checkbox
+									value="2019"
+									onChange={e => {
+										setIsFiltered(true);
+										setSearch(e.target.value);
+										checkboxSearch();
+									}}
+								/>
+								<Checkbox
+									value="2020"
+									onChange={e => {
+										setIsFiltered(true);
+										setSearch(e.target.value);
+										checkboxSearch();
+									}}
+								/>
 							</div>
 						</form>
 					</div>
