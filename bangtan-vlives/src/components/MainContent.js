@@ -6,6 +6,19 @@ import Dropdown from "./Dropdown";
 // import Card from "./Card";
 import data from "../assets/Bangtan-Impromptu-VLives.js";
 
+// notes for next time
+// so I think what's happening is that the filtering is always one character behind whatever is typed, which could be what is causing some of the searches to require typing a space after to get proper results
+// instead of having setSearch trigger as soon as the user types maybe I should add a filter results button?
+// setSearch for checkboxes is filling in the input since that is set to show search, maybe set the e.target.value to a different state thing?
+// for RM and V the filter doesn't trigger till a space is added to the search box, even for the checkboxes, but then it doesn't show some results that may not have a space after
+// date filters not working propery at all, may need to make a different search function for those
+// will need to figure out how to search when multiple checkboxes are checked
+// for some reason when searching for jin it comes up with a couple videos that are jimin related, until a space is added after "jin". Maybe a filter results button will fix that?
+
+// so I tried a submit button but it broke the filtering true or false so it doesn't clear the filtered array when you delete all characters
+// it also required changing every onChange to an onSubmit but then when submit was triggered it refreshed the page instead of searching
+// so getting the checkboxes to filter dynamically is going to be a challenge... maybe make another useState with an empty array and push the value of the checkbox into that array, so if there is more than one checkbox checked it will include all of them, but it should include everything in the array instead of just anything in it
+
 const MainContent = () => {
 	const [search, setSearch] = useState("");
 	const [filtered, setFiltered] = useState([]);
@@ -97,7 +110,6 @@ const MainContent = () => {
 									}}
 								/>
 								<br />
-								{/* <CheckboxFilter id="RM" title="Members" label="RM" filter={TermQuery("card-text", 'RM')} /> */}
 								<h6>Members</h6>
 								<Checkbox
 									value="RM"
