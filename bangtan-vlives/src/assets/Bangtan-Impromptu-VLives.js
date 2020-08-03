@@ -1655,9 +1655,23 @@ const data = [
    "Date": "2020.06.24",
    "Title": "Watch if you're bored(Frustration alert part 3!)",
    "Link": "https://www.vlive.tv/video/199251",
-   "Members": "JHope",
+   "Members": "JHope, V(cameo)",
    "Thumb": "https://v-phinf.pstatic.net/20200624_135/15929931441044upBa_JPEG/upload_VideoCapture_20200624-190340.jpg?type=f228_128"
- }
+ },
+ {
+   "Date": "2020.07.10",
+   "Title": "Eat JIN",
+   "Link": "https://www.vlive.tv/video/202299",
+   "Members": "Jin",
+   "Thumb": "https://v-phinf.pstatic.net/20200710_36/1594385105351lnHui_JPEG/upload_75DCAE43-6312-416A-B00D-BE7D76AF03FD.jpeg?type=f228_128_wp"
+ },
+ {
+   "Date": "2020.07.10",
+   "Title": "HoneyFM <JiJinJung's R.A.D.I.O> #BigAnnouncement",
+   "Link": "https://www.vlive.tv/video/204818",
+   "Members": "Jin, Jimin, Jungkook, RM, Suga, V, JHope",
+   "Thumb": "https://v-phinf.pstatic.net/20200727_280/1595778842720a126c_JPEG/6fb13426-cf57-11ea-8f1e-246e963a464c_03.jpg?type=ff340_189"
+ },
 ]
 
 export default data;
